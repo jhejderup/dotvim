@@ -28,3 +28,9 @@
 [submodule "pack/jhejderup/start/vimtex"]
 	path = pack/jhejderup/start/vimtex
 	url = https://github.com/lervag/vimtex.git
+[submodule "pack/jhejderup/opt/ultisnips"]
+	path = pack/jhejderup/opt/ultisnips
+	url = https://github.com/SirVer/ultisnips.git
+[submodule "pack/jhejderup/start/nerdtree-git-plugin"]
+	path = pack/jhejderup/start/nerdtree-git-plugin
+	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
