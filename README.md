@@ -3,7 +3,7 @@ Configuration for vim 8. It contains configuration for mainly vim (not sure abou
 
 # Installing
 
-1. Install the [powerline-fonts](https://github.com/powerline/fonts)
+1. Install the [powerline-fonts](https://github.com/powerline/fonts) and also [language-check](https://pypi.python.org/pypi/language-check)
 
 ```
 git clone https://github.com/powerline/fonts.git --depth=1
