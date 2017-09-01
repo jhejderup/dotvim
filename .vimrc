@@ -6,7 +6,6 @@ filetype plugin indent on
 set encoding=utf-8 " the encoding displayed
 set fileencoding=utf-8 " the encoding written to file
 
-colorscheme wombat
 set background=dark
 
 syntax on
@@ -17,10 +16,6 @@ filetype indent on
 
 " show linenumbers
 set number
-
-" show linenumbers relative
-set relativenumber
-
 " ctrlp
 set runtimepath^=~/.vim/pack/jhejderup/start/ctrlp
 
@@ -35,17 +30,17 @@ let g:airline_powerline_fonts = 1
 
 " vimtex
 let g:tex_flavor='latex'
+set runtimepath^=~/.vim/pack/jhejderup/start/vimtex
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 " display buffers in airline
-let g:airline#extensions#tabline#enabled = 0
+let g:airline#extensions#tabline#enabled = 1
 
 set laststatus=2
 set ttimeoutlen=50
 
 " Gitgutter
 let g:gitgutter_async = 1
-
