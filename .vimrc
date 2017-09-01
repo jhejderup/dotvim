@@ -37,10 +37,28 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 " display buffers in airline
-let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 0
 
 set laststatus=2
 set ttimeoutlen=50
 
 " Gitgutter
 let g:gitgutter_async = 1
+
+set tags=./tags,tags;$HOME
+
+" Syntastic for LaTex
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+let g:syntastic_tex_checkers = ['chktex']
+let g:syntastic_loc_list_height=3
+
+" Nerdtree file explorer
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 3
+let g:netrw_altv = 1
+let g:netrw_winsize = 25
+nmap <leader>n :Vexplore<cr>
