@@ -60,6 +60,23 @@ let g:syntastic_loc_list_height=3
 autocmd FileType gitcommit set spell textwidth=72 nofoldenable colorcolumn=51,73
 autocmd FileType tex set spell textwidth=70 suffixes+=*.aux,*.pdf,*.fdb_latexmk,*.fls,*.log,*.out,*.toc sw=2
 
+" toggle spell lang
+function! ToggleSpell()
+    if &spell == 0
+        set spell
+        set spelllang=en
+        echo 'spelllang=en'
+    elseif &spelllang =~# 'en'
+        set spell
+        set spelllang=sv
+        echo 'spelllang=sv'
+    elseif &spelllang =~# 'sv'
+        set nospell
+        echo 'nospell'
+    endif
+endfunction
+noremap <leader>z <ESC>:call ToggleSpell()<CR>
+
 " Nerdtree file explorer
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
