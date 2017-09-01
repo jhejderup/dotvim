@@ -56,6 +56,10 @@ let g:syntastic_tex_checkers = ['chktex']
 let g:syntastic_text_language_check_args = '--language=en-US'
 let g:syntastic_loc_list_height=3
 
+" filetype specific configuration
+autocmd FileType gitcommit set spell textwidth=72 nofoldenable colorcolumn=51,73
+autocmd FileType tex set spell textwidth=70 suffixes+=*.aux,*.pdf,*.fdb_latexmk,*.fls,*.log,*.out,*.toc sw=2
+
 " Nerdtree file explorer
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
