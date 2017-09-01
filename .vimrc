@@ -33,6 +33,9 @@ nnoremap <leader>. :CtrlPTag<cr>
 " vim-airline
 let g:airline_powerline_fonts = 1
 
+" vimtex
+let g:tex_flavor='latex'
+
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
