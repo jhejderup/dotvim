@@ -13,7 +13,7 @@ cd ..
 rm -rf fonts
 ```
 
-2. Change the Terminal profile setting to use of the installed fonts from the previous step
+2. Change the Terminal profile setting to use one of the installed fonts from the previous step
 ```
 Terminal > Preferences > Text > Font [Source Code Pro for Powerline pt 11.]
 ```
