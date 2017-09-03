@@ -6,10 +6,24 @@ filetype plugin indent on
 set encoding=utf-8 " the encoding displayed
 set fileencoding=utf-8 " the encoding written to file
 
+colorscheme gruvbox
+set fillchars+=vert:\$
 set background=dark
 
-syntax on
+set ruler
+set hidden
+set number
+set laststatus=2
+set smartindent
+set st=4 sw=4 et
+set shiftwidth=4
+set tabstop=4
+let &colorcolumn="80"
 
+
+
+
+syntax on
 filetype on
 filetype plugin on
 filetype indent on
@@ -22,11 +36,19 @@ set runtimepath^=~/.vim/pack/jhejderup/start/ctrlp
 " Make CtrlP faster by making it skip files inside .gitignore
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
+
+" auto-complete features
+set complete=.,b,u,]
+set completeopt=menu,preview
+
 " Let ctrlp search through tags file (ctags)
 nnoremap <leader>. :CtrlPTag<cr>
 
 " vim-airline
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#left_sep = ''
+let g:airline#extensions#tabline#left_alt_sep = ''
+
 
 " vimtex
 let g:tex_flavor='latex'
@@ -37,7 +59,7 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 " display buffers in airline
-let g:airline#extensions#tabline#enabled = 0
+let g:airline#extensions#tabline#enabled = 1
 
 set laststatus=2
 set ttimeoutlen=50
@@ -59,6 +81,7 @@ let g:syntastic_loc_list_height=3
 " filetype specific configuration
 autocmd FileType gitcommit set spell textwidth=72 nofoldenable colorcolumn=51,73
 autocmd FileType tex set spell textwidth=70 suffixes+=*.aux,*.pdf,*.fdb_latexmk,*.fls,*.log,*.out,*.toc sw=2
+autocmd FileType markdown setlocal spell textwidth=80	
 
 " toggle spell lang
 function! ToggleSpell()
