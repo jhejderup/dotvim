@@ -34,3 +34,12 @@
 [submodule "pack/jhejderup/start/nerdtree-git-plugin"]
 	path = pack/jhejderup/start/nerdtree-git-plugin
 	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
+[submodule "pack/jhejderup/start/vim-conflicted"]
+	path = pack/jhejderup/start/vim-conflicted
+	url = https://github.com/christoomey/vim-conflicted.git
+[submodule "pack/jhejderup/opt/gundo.vim"]
+	path = pack/jhejderup/opt/gundo.vim
+	url = https://github.com/sjl/gundo.vim.git
+[submodule "pack/jhejderup/opt/tabular"]
+	path = pack/jhejderup/opt/tabular
+	url = https://github.com/godlygeek/tabular.git
