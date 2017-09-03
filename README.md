@@ -33,5 +33,3 @@ sure about macvim)
 ``` git submodule deinit .vim/pack/jhejderup/start/nameofplugin git rm
 .vim/pack/jhejderup/start/nameofplugin rm -Rf
 .git/modules/.vim/pack/jhejderup/start/nameofplugin ```
-
-
