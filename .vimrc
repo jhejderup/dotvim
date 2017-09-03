@@ -10,6 +10,9 @@ colorscheme gruvbox
 set fillchars+=vert:\$
 set background=dark
 
+" Set to auto read when a file is changed from the outside
+"set autoread
+
 set ruler
 set hidden
 set smartindent
@@ -44,18 +47,14 @@ nnoremap <leader>. :CtrlPTag<cr>
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#left_sep = ''
 let g:airline#extensions#tabline#left_alt_sep = ''
+let g:airline#extensions#ale#enabled = 1
+" display buffers in airline
+let g:airline#extensions#tabline#enabled = 1
 
 
 " vimtex
 let g:tex_flavor='latex'
 set runtimepath^=~/.vim/pack/jhejderup/start/vimtex
-
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-" display buffers in airline
-let g:airline#extensions#tabline#enabled = 1
 
 set laststatus=2
 set ttimeoutlen=50
@@ -65,19 +64,20 @@ let g:gitgutter_async = 1
 
 set tags=./tags,tags;$HOME
 
-" Syntastic for LaTex
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-let g:syntastic_tex_checkers = ['chktex']
-let g:syntastic_text_language_check_args = '--language=en-US'
-let g:syntastic_loc_list_height=3
+"Ale  for LaTex
+let g:ale_linters = {'tex': ['chktex']}
+" %linter% is the name of the linter that provided the message
+" %s is the error or warning message
+let g:ale_echo_msg_format = '%linter% says %s'
+" Map keys to navigate between lines with errors and warnings.
+nnoremap <leader>an :ALENextWrap<cr>
+nnoremap <leader>ap :ALEPreviousWrap<cr>
+
 
 " filetype specific configuration
 autocmd FileType gitcommit set spell textwidth=72 nofoldenable colorcolumn=51,73
 autocmd FileType tex set spell textwidth=70 suffixes+=*.aux,*.pdf,*.fdb_latexmk,*.fls,*.log,*.out,*.toc sw=2
-autocmd FileType markdown setlocal spell textwidth=80	
+autocmd FileType markdown set spell textwidth=80	
 
 " toggle spell lang
 function! ToggleSpell()

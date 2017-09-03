@@ -22,9 +22,6 @@
 [submodule "pack/jhejderup/start/nerdtree"]
 	path = pack/jhejderup/start/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
-[submodule "pack/jhejderup/start/syntastic"]
-	path = pack/jhejderup/start/syntastic
-	url = https://github.com/vim-syntastic/syntastic.git
 [submodule "pack/jhejderup/start/vimtex"]
 	path = pack/jhejderup/start/vimtex
 	url = https://github.com/lervag/vimtex.git
@@ -43,3 +40,6 @@
 [submodule "pack/jhejderup/opt/tabular"]
 	path = pack/jhejderup/opt/tabular
 	url = https://github.com/godlygeek/tabular.git
+[submodule "pack/jhejderup/start/ale"]
+	path = pack/jhejderup/start/ale
+	url = https://github.com/w0rp/ale.git
