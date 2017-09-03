@@ -28,6 +28,12 @@ git submodule init
 git submodule update 
 ```
 
+4. For MACVIM or other GUI users to enable powerline fints
+
+```
+ln -s .vim/.gvimrc ~/.gvimrc
+```
+
 # Manage Plugins
 
 ## Updating packages
