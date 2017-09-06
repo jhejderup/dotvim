@@ -5,23 +5,29 @@ filetype plugin indent on
 
 set encoding=utf-8 " the encoding displayed
 set fileencoding=utf-8 " the encoding written to file
-
+" Enable highlighting of the current line
+set cursorline
 colorscheme gruvbox
 set fillchars+=vert:\$
 set background=dark
 
-" Set to auto read when a file is changed from the outside
-"set autoread
 
+set list
+set listchars=tab:▸\ ,eol:¬,trail:▫
+
+
+set autowrite     " Automatically :write before running commands
+set autoread      " Reload files changed outside vim
+" Trigger autoread when changing buffers or coming back to vim in terminal.
+au FocusGained,BufEnter * :silent! !
+set showcmd       " display incomplete command
 set ruler
 set hidden
 set smartindent
 set st=4 sw=4 et
 set shiftwidth=4
 set tabstop=4
-let &colorcolumn="80"
-
-
+set visualbell    " stop that ANNOYING beeping
 syntax on
 filetype on
 filetype plugin on
@@ -76,8 +82,8 @@ nnoremap <leader>ap :ALEPreviousWrap<cr>
 
 " filetype specific configuration
 autocmd FileType gitcommit set spell textwidth=72 nofoldenable colorcolumn=51,73
-autocmd FileType tex set spell textwidth=70 suffixes+=*.aux,*.pdf,*.fdb_latexmk,*.fls,*.log,*.out,*.toc sw=2
-autocmd FileType markdown set spell textwidth=80	
+autocmd FileType tex set spell textwidth=70 colorcolumn=70 suffixes+=*.aux,*.pdf,*.fdb_latexmk,*.fls,*.log,*.out,*.toc sw=2
+au BufRead,BufNewFile *.md setlocal spell textwidth=80 colorcolumn=80
 
 " toggle spell lang
 function! ToggleSpell()
