@@ -43,3 +43,12 @@
 [submodule "pack/jhejderup/start/ale"]
 	path = pack/jhejderup/start/ale
 	url = https://github.com/w0rp/ale.git
+[submodule "pack/jhejderup/start/vim-pandoc"]
+	path = pack/jhejderup/start/vim-pandoc
+	url = https://github.com/vim-pandoc/vim-pandoc.git
+[submodule "pack/jhejderup/start/vim-rmarkdown"]
+	path = pack/jhejderup/start/vim-rmarkdown
+	url = https://github.com/vim-pandoc/vim-rmarkdown.git
+[submodule "pack/jhejderup/start/vim-pandoc-syntax"]
+	path = pack/jhejderup/start/vim-pandoc-syntax
+	url = https://github.com/vim-pandoc/vim-pandoc-syntax.git
