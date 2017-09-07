@@ -5,8 +5,7 @@ sure about macvim)
 
 # Installing
 
-1. Install [powerline-fonts](https://github.com/powerline/fonts),
-   [language-check](https://pypi.python.org/pypi/language-check) and also [Nerd
+1. Install [powerline-fonts](https://github.com/powerline/fonts) and [Nerd
    Front!](https://github.com/ryanoasis/nerd-fonts#font-installation)
 
 ```
