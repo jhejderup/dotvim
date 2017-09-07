@@ -52,3 +52,6 @@
 [submodule "pack/jhejderup/start/vim-pandoc-syntax"]
 	path = pack/jhejderup/start/vim-pandoc-syntax
 	url = https://github.com/vim-pandoc/vim-pandoc-syntax.git
+[submodule "pack/jhejderup/start/tabular"]
+	path = pack/jhejderup/start/tabular
+	url = https://github.com/godlygeek/tabular.git
