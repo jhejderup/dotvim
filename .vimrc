@@ -84,6 +84,7 @@ nnoremap <leader>ap :ALEPreviousWrap<cr>
 autocmd FileType gitcommit set spell textwidth=72 nofoldenable colorcolumn=51,73
 autocmd FileType tex set spell textwidth=70 colorcolumn=70 suffixes+=*.aux,*.pdf,*.fdb_latexmk,*.fls,*.log,*.out,*.toc sw=2
 au BufRead,BufNewFile *.md setlocal spell textwidth=80 colorcolumn=80
+au BufRead,BufNewfile *.Rmd set filetype=rmarkdown
 
 " toggle spell lang
 function! ToggleSpell()
