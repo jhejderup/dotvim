@@ -1,8 +1,6 @@
 set nocompatible
-
 set t_CO=256
 filetype plugin indent on
-
 set encoding=utf-8 " the encoding displayed
 set fileencoding=utf-8 " the encoding written to file
 " Enable highlighting of the current line
@@ -10,10 +8,11 @@ set cursorline
 colorscheme gruvbox
 set fillchars+=vert:\$
 set background=dark
-
-
 set list
 set listchars=tab:▸\ ,eol:¬,trail:▫
+
+" Auto cd to the current working file
+autocmd BufEnter * if expand("%:p:h") !~ '^/tmp' | silent! lcd %:p:h | endif
 
 
 set autowrite     " Automatically :write before running commands
@@ -83,8 +82,8 @@ nnoremap <leader>ap :ALEPreviousWrap<cr>
 " filetype specific configuration
 autocmd FileType gitcommit set spell textwidth=72 nofoldenable colorcolumn=51,73
 autocmd FileType tex set spell textwidth=70 colorcolumn=70 suffixes+=*.aux,*.pdf,*.fdb_latexmk,*.fls,*.log,*.out,*.toc sw=2
-au BufRead,BufNewFile *.md setlocal spell textwidth=80 colorcolumn=80
-au BufRead,BufNewfile *.Rmd set filetype=rmarkdown
+au BufRead,BufNewFile *.md set spell textwidth=80 colorcolumn=80
+au BufRead,BufNewfile *.Rmd set filetype=rmarkdown textwidth=80 colorcolumn=80
 
 " toggle spell lang
 function! ToggleSpell()
@@ -110,3 +109,8 @@ let g:netrw_browse_split = 3
 let g:netrw_altv = 1
 let g:netrw_winsize = 25
 nmap <leader>n :Vexplore<cr>
+
+"Pandoc settings, not open for markdown files
+let g:pandoc#filetypes#pandoc_markdown = 0
+
+let g:vimtex_view_method = 'skim'
