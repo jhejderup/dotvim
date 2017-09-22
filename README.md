@@ -25,8 +25,8 @@ Terminal > Preferences > Text > Font [Source Code Pro for Powerline pt 11.]
 
 ```
 git clone https://github.com/jhejderup/dotvim.git .vim
-ln -s .vim/.vimrc
-~/.vimrc cd .vim
+ln -s .vim/.vimrc ~/.vimrc
+cd .vim
 git submodule init
 git submodule update
 ```
