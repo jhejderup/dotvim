@@ -58,3 +58,6 @@
 [submodule "pack/jhejderup/start/vim-markdown"]
 	path = pack/jhejderup/start/vim-markdown
 	url = https://github.com/plasticboy/vim-markdown.git
+[submodule "pack/jhejderup/start/rust.vim"]
+	path = pack/jhejderup/start/rust.vim
+	url = https://github.com/rust-lang/rust.vim.git
