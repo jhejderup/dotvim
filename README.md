@@ -38,6 +38,13 @@ ln -s .vim/.gvimrc ~/.gvimrc
 ```
 # Manage Plugins
 
+## Installing a package
+
+```
+cd pack/jhejderup/{start | opt}
+git submodule add {repo_url.git}
+```
+
 ## Updating packages
 
 ```
